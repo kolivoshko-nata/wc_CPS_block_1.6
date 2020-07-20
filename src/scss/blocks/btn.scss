@@ -1,0 +1,211 @@
+$btn-size: 40px;
+
+.btn {
+  width: $btn-size;
+  height: $btn-size;
+  background: $btn-background no-repeat 50% 50%;
+  border-radius: 50%;
+  display: flex;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+
+  &--call {
+    background-image: url("../img/call.svg");
+  }
+
+  &--message {
+    background-image: url("../img/message.svg");
+  }
+
+  &--profile {
+    background-image: url("../img/profile.svg");
+  }
+
+  &--close {
+    background-image: url("../img/close.svg");
+  }
+
+  &--search {
+    background-image: url("../img/search.svg");
+  }
+
+  &--menu {
+    background-image: url("../img/menu.svg");
+  }
+
+  &--checkstatus {
+    background-image: url("../img/checkstatus.svg");
+  }
+
+  &--repair {
+    background-image: url("../img/repair.svg");
+  }
+
+  &:hover {
+    filter: opacity(.5);
+  }
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &--search {
+    transition: transform .5s;
+
+  }
+
+  &--search:hover {
+    transform: scale(1.2);
+    transition: transform .5s;
+  }
+
+  &--close {
+    transition: transform .5s;
+  }
+
+  &--call {
+    transition: opacity, transform .5s;
+  }
+
+  &--call:hover, &--message:hover, &--profile:hover, &--close:hover {
+    transform: rotateZ(360deg);
+    transition: .5s;
+    filter: drop-shadow(2px 2px 15px $brand-color);
+  }
+
+  &--message {
+    transition: opacity, transform .5s;
+  }
+
+  &--profile {
+    transition: opacity, transform .5s;
+  }
+
+  &--submit {
+    width: 132px;
+    height: 36px;
+    border-radius: 16px;
+    color: $bg-color;
+    align-self: flex-end;
+    position: relative;
+    margin-left: auto;
+    background-image: url("../img/arrow.svg");
+    background-position: 90% 50%;
+  }
+
+  &--slider {
+    position: relative;
+    top: 15px;
+    left: 75%;
+    background: url("../../src/img/brands/dropdown.svg") no-repeat 50% 50%;
+    border: 2px solid #FF3E79;
+    outline: none;
+    border-radius: 50%;
+  }
+
+  &--slider:hover {
+    transition: opacity, transform .5s;
+  }
+
+  &--slider--services {
+    position: relative;
+    top: 70px;
+  }
+
+  &--slider--prices {
+    font-family: TTLakes-Bold, serif;
+    width: 119px;
+    height: 32px;
+    cursor: pointer;
+    border-radius: 16px;
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+    background: #FF3E79 url("../img/arrow.svg") no-repeat 90% 55%;
+    padding-right: 20px;
+    margin-right: 16px;
+  }
+
+  &--slider--prices:hover {
+    opacity: .5;
+  }
+
+  &--offer {
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    font-family: TTLakes-Bold;
+    border: none;
+    margin: 16px 0 50px 24px;
+    width: 300px;
+    text-align: left;
+    background: url("../../src/img/brands/dropdown.svg") no-repeat 40% 90%;
+  }
+
+  @media screen and (min-width: 768px) {
+    &--offer {
+      width: 325px;
+      white-space: nowrap;
+      background: url("../../src/img/brands/dropdown.svg") no-repeat 100%;
+    }
+    &--checkstatus {
+      margin-right: 8px;
+    }
+    &--slider--prices {
+      width: 120px;
+      height: 32px;
+      cursor: pointer;
+      border-radius: 16px;
+      outline: none;
+      border: none;
+      color: #FFFFFF;
+      background: #FF3E79 url("../img/arrow.svg") no-repeat 90% 55%;
+      margin: 0;
+    }
+  }
+  @media screen and (min-width: 1120px) {
+
+    &--checkstatus {
+      margin-left: 50px;
+    }
+
+    &--checkstatus:before {
+      content: 'Статус ремонта';
+
+    }
+    &--repair:before {
+      content: 'Оставить заявку';
+    }
+    &--checkstatus, &--repair {
+      margin-top: 32px;
+    }
+    &--checkstatus:before, &--repair:before {
+      font-size: 16px;
+      color: #1B1C21;
+      position: absolute;
+      margin-left: -85px;
+      padding-right: 20px;
+      white-space: nowrap;
+      font-weight: bold;
+    }
+    &--close {
+      display: none;
+      visibility: hidden;
+
+    }
+    &--search {
+      align-self: center;
+      margin: 0;
+    }
+    &--profile {
+      margin-right: 0;
+    }
+  }
+}
+
+
+
+

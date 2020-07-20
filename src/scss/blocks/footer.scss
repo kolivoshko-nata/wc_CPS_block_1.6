@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  font-family: TTLakes-Regular, serif;
+  font-size: 14px;
+  text-align: center;
+  flex-direction: column;
+  background-color: $body-color;
+  color: #7E7E82;
+  mix-blend-mode: normal;
+  border-top: 1px solid $underline-color;
+
+  &__elem {
+    margin: 18px 24px;
+  }
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}

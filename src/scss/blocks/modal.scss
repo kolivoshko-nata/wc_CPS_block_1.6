@@ -1,0 +1,101 @@
+.modal {
+  position: fixed;
+  right: -500px;
+  top: 0;
+  transition: right 1s;
+
+  &__wrapper {
+    padding: 24px 16px;
+    display: flex;
+    flex-direction: column;
+    width: 320px;
+    height: 1000px;
+    //overflow: scroll;
+  }
+
+
+  &__button {
+    font-family: TTLakes-Bold, serif;
+    margin-bottom: 32px;
+    display: block;
+    visibility: visible;
+    margin-top: 0;
+  }
+
+  &__title {
+    font-family: TTLakes-Bold, serif;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    margin-bottom: 24px;
+  }
+
+  &__title:before {
+    content: '';
+    position: relative;
+    right: 16px;
+    width: 2px;
+    height: 40px;
+    border: 2px solid #41F6D7;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &__input {
+    padding: 12px 16px;
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 16px;
+    line-height: 24px;
+    font-family: TTLakes-Medium, serif;
+    letter-spacing: -0.2px;
+    color: #B5B6BC;
+    opacity: .7;
+    margin-bottom: 16px;
+    cursor: text;
+    outline: none;
+  }
+
+  &__input:hover {
+  }
+
+  &__information {
+    font-family: TTLakes-Medium, serif;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    margin-bottom: 18px;
+  }
+
+  &__link {
+    font-family: TTLakes-Medium, serif;
+    color: #FF3E79;
+    text-decoration: none;
+    outline: none;
+  }
+
+  &__input--message {
+    height: 118px;
+    vertical-align: top;
+  }
+
+
+  @media screen and (min-width: 1120px) {
+    & {
+      box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2), -2px 0px 4px rgba(69, 79, 126, 0.02);
+      border-left: 1px solid #D9FFF5;;
+    }
+    &__wrapper {
+      width: 400px;
+    }
+
+    &__button--close {
+      position: absolute;
+      top: 20px;
+      right: 450px;
+    }
+  }
+}

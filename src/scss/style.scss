@@ -1,0 +1,45 @@
+$body-color: #f8f8f8;
+$bg-color: #ffffff;
+$font-color: #1B1C21;
+$brand-color: #41F6D7;
+$underline-color: #D9FFF5;
+$btn-background: #FF3E79;
+
+@import "blocks/btn";
+@import "blocks/footer";
+@import "blocks/header";
+@import "blocks/main";
+@import "blocks/modal";
+@import "blocks/sidebar";
+@import "blocks/swiper";
+
+@font-face {
+  font-family: "TTLakes-Regular";
+  src: url("../fonts/TTLakes-Regular.woff") format("woff");
+}
+@font-face {
+  font-family: "TTLakes-Medium";
+  src: url("../fonts/TTLakes-Medium.woff") format("woff");
+}
+@font-face {
+  font-family: "TTLakes-Bold";
+  src: url("../fonts/TTLakes-Bold.woff") format("woff");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: TTLakes-Regular, SansSerif, serif;
+}
+body {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1120px) {
+  .container {
+   display: flex;
+  }
+}
+

@@ -1,0 +1,275 @@
+.swiper {
+  background-color: $body-color;
+
+  &__title {
+    font-family: TTLakes-Regular, serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #7E7E82;
+    padding: 16px 16px 16px 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, $body-color 1.39%, #FFFFFF 100%);
+    border-top: 1px solid $underline-color;
+  }
+
+  &__container {
+    background: #f8f8f8;
+    padding: 16px 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 170px;
+  }
+
+  &__container--services {
+    height: 250px;
+  }
+
+  &__container--prices {
+    display: flex;
+    flex-direction: column;
+    height: 320px;
+  }
+
+  &__slide {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+    cursor: pointer;
+    height: 72px;
+  }
+
+  &__slide--services {
+    height: 160px;
+    padding: 16px;
+  }
+
+  &__slide--prices {
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 0 0 16px;
+  }
+
+  &__slide--prices {
+    color: #7E7E82;
+  }
+
+  &__slide--prices p:nth-child(2n):not(.btn) {
+    margin-bottom: 12px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+  }
+
+  &__slide--prices p:nth-child(6n):not(.btn) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__slide:hover {
+    background-color: whitesmoke;
+    border: 1px solid red;
+  }
+
+  &__slide--lenovo {
+    background: #FFFFFF url("../img/brands/Lenovo.svg") no-repeat 16px 50%;
+  }
+
+  &__slide--samsung {
+    background: #FFFFFF url("../img/brands/Samsung.svg") no-repeat 16px 50%;
+  }
+
+  &__slide--bosch {
+    background: #FFFFFF url("../img/brands/Bosch.svg") no-repeat 16px 50%;
+  }
+
+  &__slide--hp {
+    background: #FFFFFF url("../img/brands/Hp.svg") no-repeat 16px 50%;
+  }
+
+  &__slide--apple {
+    background: #FFFFFF url("../img/brands/Apple.svg") no-repeat 16px 50%;
+  }
+
+  &__slide--acer {
+    background: #FFFFFF url("../img/brands/Acer.svg") no-repeat 16px 50%;
+  }
+
+  &__slide--viewsonic {
+    background: #FFFFFF url("../img/brands/ViewSonic.svg") no-repeat 16px 50%;
+  }
+
+  &__slide--sony {
+    background: #FFFFFF url("../img/brands/Sony.svg") no-repeat 16px 50%;
+  }
+
+  &__pagination {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    justify-content: center;
+  }
+
+
+  &__read-more {
+    outline: none;
+    margin: 20px;
+    transform: rotate(0deg);
+    cursor: pointer;
+    display: none;
+    //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  }
+  &__read-more:hover {
+    filter: drop-shadow(2px 2px 0px #099c80);
+    transform: scale(1.1);
+    opacity: .8;
+  }
+
+  &__large-screen {
+    display: none;
+  }
+
+  &__table {
+    margin: 0 16px;
+  }
+
+  &__commercial-offer {
+    margin-top: 16px;
+    padding: 0 16px;
+  }
+
+  @media screen and (min-width: 768px) {
+    &__large-screen {
+      font-family: TTLakes-Regular, serif;
+      margin: 16px auto;
+      background-color: #FFFFFF;
+      vertical-align: center;
+      display: table;
+      text-align: left;
+      border-radius: 6px;
+    }
+    &__large-screen td, &__large-screen th {
+      padding: 15px 0;
+    }
+    &__large-screen td {
+      border-bottom: 1px solid #EAEAEA;
+      //padding-right: 20px;
+    }
+    &__large-screen td:not(:last-child) {
+      padding-right: 10px;
+    }
+    &__container {
+      height: auto;
+      padding-left: 0;
+    }
+    &__container--prices {
+      height: auto;
+      padding-left: 0;
+      display: none;
+      visibility: hidden;
+    }
+    &__wrapper--prices {
+      display: none;
+      visibility: hidden;
+      flex-wrap: wrap;
+      height: 180px;
+      overflow: hidden;
+      justify-content: flex-start;
+    }
+    &__wrapper {
+      flex-wrap: wrap;
+      height: 200px;
+      overflow: hidden;
+      justify-content: flex-start;
+    }
+    &__wrapper--prices {
+      display: none;
+      visibility: hidden;
+    }
+    &__title {
+      padding-left: 26px;
+    }
+    &__slide {
+      flex-basis: 240px;
+      margin: 16px auto 16px;
+    }
+
+    .wrapper--open {
+      height: 85%;
+    }
+    &__pagination {
+      display: none;
+    }
+    &__read-more {
+      outline: none;
+      margin: 20px;
+      cursor: pointer;
+      display: inline-block;
+      //-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+  }
+  @media screen and (min-width: 1120px) {
+    &__large-screen {
+      margin: 16px auto;
+    }
+    &__large-screen td:not(:last-child) {
+      padding-right: 20px;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__slide {
+      flex-basis: 240px;
+      margin: 24px auto 0;
+    }
+
+    .wrapper--open {
+      height: 85%;
+    }
+    &__title {
+      padding-left: 32px;
+    }
+  }
+}
+
+.read-more__text--open {
+  transform: rotate(180deg);
+}
+
+.read-more__text {
+  font-family: TTLakes-Medium, serif;
+  margin-left: 10px;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  background: #DDDDDD;
+  opacity: 1;
+  outline: none;
+  margin-left: 12px;
+}
+
+.swiper-pagination-bullet:last-child {
+  margin-right: 16px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #B5B6BC;
+}
+::-webkit-scrollbar {
+  width: 0;
+}
+
